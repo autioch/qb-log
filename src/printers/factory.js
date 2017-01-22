@@ -7,7 +7,7 @@ const chalk = require('chalk');
  * @param  {Object} definition Definition of the printer to create.
  * @return {Object}            Public api of the created printer.
  */
-function logger(definition) {
+function logger(definition = {}) {
   const { prefix = '', formatter = (text) => text, showTime = true } = definition;
   let formattedPrefix = prefix;
 
