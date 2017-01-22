@@ -1,0 +1,19 @@
+{
+  "name": "qb-log",
+  "version": "0.0.1",
+  "description": "Yet another logging package",
+  "main": "index.js",
+  "keywords": [
+    "log",
+    "logging",
+    "console",
+    "terminal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "pad-right": "^0.2.2",
+    "repeat-string": "^1.6.1"
+  }
+}
