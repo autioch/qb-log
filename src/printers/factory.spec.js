@@ -1,6 +1,5 @@
 /* eslint-env mocha */
-const chai = require('chai');
-const expect = chai.expect;
+const { expect } = require('chai');
 const loggerFactory = require('./factory');
 
 describe('Logger factory', () => {

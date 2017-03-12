@@ -17,7 +17,7 @@ function qbLog(definition = {}) {
 }
 
 /* Basic console log. */
-qbLog.log = console.log.bind(console);
+qbLog.log = console.log.bind(console); // eslint-disable-line no-console
 
 /* Exposed chalk package. */
 qbLog._chalk = require('chalk');
@@ -28,10 +28,9 @@ qbLog._chalk = require('chalk');
  * @param {Object} definition Config of the printer.
  * @return {mixed}            Created instance of the printer or false if the instance if already created.
  */
-qbLog._add = function(id, definition) {
+qbLog._add = function _add(id, definition) {
   const printer = printers.add(id, definition);
 
-  console.log('id', id);
   if (printer) {
     qbLog[id] = printer.print;
   }
@@ -44,7 +43,7 @@ qbLog._add = function(id, definition) {
  * @param  {String} id Name of the printer.
  * @return {undefined}    Nothing
  */
-qbLog._remove = function(id) {
+qbLog._remove = function _remove(id) {
   printers.remove(id);
 
   delete qbLog[id];

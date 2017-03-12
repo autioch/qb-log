@@ -1,7 +1,6 @@
 /* eslint-env mocha */
 /* eslint no-unused-expressions: 0 */
-const chai = require('chai');
-const expect = chai.expect;
+const { expect } = require('chai');
 const cache = require('./cache');
 
 describe('Cache object', () => {

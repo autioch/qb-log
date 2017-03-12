@@ -12,11 +12,11 @@ function logger(definition = {}) {
   let formattedPrefix = prefix;
 
   function printTime(...message) {
-    console.log(chalk.gray(time.current), formattedPrefix, ...message);
+    console.log(chalk.gray(time.current), formattedPrefix, ...message); // eslint-disable-line no-console
   }
 
   function printEmpty(...message) {
-    console.log(time.empty, formattedPrefix, ...message);
+    console.log(time.empty, formattedPrefix, ...message); // eslint-disable-line no-console
   }
 
   function refresh(textWidth) {
