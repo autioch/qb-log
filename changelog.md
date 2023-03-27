@@ -3,6 +3,7 @@
 ## 1.1.0
 - replaced dependencies with native methods
 - dev dependencies updated
+- chalk moved to peer dependency and updated
 - readme updated
 
 ## 1.0.0
