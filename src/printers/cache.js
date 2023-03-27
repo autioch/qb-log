@@ -20,7 +20,7 @@ function refresh() {
  */
 function add(id, definition = {}) {
   if (cache.hasOwnProperty(id)) {
-    console.log(`qb-log already has printer ${id}`); // eslint-disable-line no-console
+    console.log(`qb-log already has printer ${id}`);
 
     return false;
   }
@@ -39,7 +39,7 @@ function add(id, definition = {}) {
  */
 function remove(id) {
   if (!cache.hasOwnProperty(id)) {
-    console.log(`qb-log does not have printer ${id}`); // eslint-disable-line no-console
+    console.log(`qb-log does not have printer ${id}`);
 
     return false;
   }

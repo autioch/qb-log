@@ -17,7 +17,7 @@ function qbLog(definition = {}) {
 }
 
 /* Basic console log. */
-qbLog.log = console.log.bind(console); // eslint-disable-line no-console
+qbLog.log = console.log.bind(console);
 
 /* Exposed chalk package. */
 qbLog._chalk = require('chalk');

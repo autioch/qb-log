@@ -1,21 +1,25 @@
-const time = require('./time');
 const chalk = require('chalk');
+
+const width = '24:59:59'.length;
+const empty = ' '.repeat(width);
+const current = () => new Date().toTimeString().substr(0, width);
+const noFormatter = (text) => text;
 
 /**
  * Creates a new instance of a printer
  * @param  {Object} definition Definition of the printer to create.
  * @return {Object}            Public api of the created printer.
  */
-function logger(definition = {}) {
-  const { prefix = '', formatter = (text) => text, showTime = true } = definition;
+module.exports = function logger(definition = {}) {
+  const { prefix = '', formatter = noFormatter, showTime = true } = definition;
   let formattedPrefix = prefix;
 
   function printTime(...message) {
-    console.log(chalk.gray(time.current), formattedPrefix, ...message); // eslint-disable-line no-console
+    console.log(chalk.gray(current()), formattedPrefix, ...message);
   }
 
   function printEmpty(...message) {
-    console.log(time.empty, formattedPrefix, ...message); // eslint-disable-line no-console
+    console.log(empty, formattedPrefix, ...message);
   }
 
   function refresh(textWidth) {
@@ -27,6 +31,5 @@ function logger(definition = {}) {
     prefix,
     refresh
   };
-}
+};
 
-module.exports = logger;
