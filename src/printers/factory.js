@@ -1,5 +1,4 @@
 const time = require('./time');
-const padRight = require('pad-right');
 const chalk = require('chalk');
 
 /**
@@ -20,7 +19,7 @@ function logger(definition = {}) {
   }
 
   function refresh(textWidth) {
-    formattedPrefix = formatter(padRight(prefix, textWidth, ' '));
+    formattedPrefix = formatter(prefix.padEnd(textWidth, ' '));
   }
 
   return {

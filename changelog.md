@@ -1,9 +1,15 @@
 # Changelog
 
-## 2017-03-04
-Version `1.0.0`. Readme updated.
+## 1.1.0
+- replaced dependencies with native methods
+- dev dependencies updated
+- readme updated
 
-## 2017-01-22
-Version `0.0.1`. First implementation.
- - basic api,
- - documentation.
+## 1.0.0
+- official release
+- readme updated
+
+## 0.0.1
+- first implementation
+- basic api
+- documentation

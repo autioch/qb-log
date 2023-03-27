@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'qb',
+  'extends': 'qb',
   rules: {
     'no-underscore-dangle': ['off']
   }

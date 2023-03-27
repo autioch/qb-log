@@ -26,6 +26,7 @@ function add(id, definition = {}) {
   }
 
   cache[id] = factory(definition);
+
   refresh();
 
   return cache[id];
@@ -44,6 +45,7 @@ function remove(id) {
   }
 
   delete cache[id];
+
   refresh();
 
   return true;
